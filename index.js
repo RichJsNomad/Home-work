@@ -8,3 +8,9 @@ function sum(a, b) {
 }
 
 log(sum(5, 8));
+
+function del(a, b) {
+  return a - b;
+}
+
+log(del(4, 1));
