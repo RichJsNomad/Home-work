@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор Систем Счисления</title>
+  </head>
+  <body>
+    <script>
+      function myPrompt() {
+        const inputNumber = prompt("Введите число");
+        const number = Number(inputNumber);
+
+        if (!Number.isInteger(number)) {
+          alert("Некорректный ввод!");
+          return;
+        }
+
+        const inputRadix = prompt("Введите систему счисления для числа");
+        const radix = Number(inputRadix);
+
+        if (!Number.isInteger(radix) || radix < 2 || radix > 36) {
+          alert("Некорректный ввод!");
+          return;
+        }
+
+        const converted = number.toString(radix);
+
+        alert(
+          `Ответ: число ${number} в ${radix}-ой системе счисления = ${converted}`
+        );
+      }
+
+      myPrompt();
+    </script>
+  </body>
+</html>
